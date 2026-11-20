@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#5b45c8", "primary-fixed": "#e5deff", "secondary-fixed": "#6ffbbe", "error": "#ba1a1a", "error-container": "#ffdad6", "primary-container": "#7460e3", "surface-dim": "#dbd8e6", "on-secondary-container": "#00714d", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "inverse-on-surface": "#f2effd", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "on-primary-fixed": "#1a0063", "tertiary": "#825100", "on-tertiary-fixed": "#2a1700", "on-primary": "#ffffff", "surface-container-highest": "#e3e1ef", "on-secondary-fixed": "#002113", "on-error-container": "#93000a", "secondary-container": "#6cf8bb", "tertiary-container": "#a36700", "secondary-fixed-dim": "#4edea3", "surface-variant": "#e3e1ef", "tertiary-fixed": "#ffddb8", "surface-tint": "#5d48cb", "on-secondary-fixed-variant": "#005236", "on-primary-container": "#fffbff", "surface-container": "#efecfa", "primary-fixed-dim": "#c8bfff", "on-tertiary-fixed-variant": "#653e00", "outline": "#797585", "on-surface": "#1b1b24", "surface-container-high": "#e9e6f5", "inverse-primary": "#c8bfff", "on-surface-variant": "#484554", "secondary": "#006c49", "outline-variant": "#c9c4d6", "surface-container-low": "#f5f2ff", "inverse-surface": "#302f3a", "surface": "#fcf8ff", "tertiary-fixed-dim": "#ffb95f", "background": "#fcf8ff", "on-primary-fixed-variant": "#452bb2", "on-background": "#1b1b24", "on-tertiary": "#ffffff", "on-tertiary-container": "#fffbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "1.5rem", "gutter-compact": "0.75rem", "space-md": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-2xl": "2rem", "space-lg": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "numeric-countdown": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "numeric-countdown": ["18px", { "lineHeight": "22px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fcf8ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ExpiryAlert Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrD_tp79JarSJJ-VsLYRj2fv1dYxUZtgsWYpgkJDqmVd9BojlI5ac6eA0dmLhphPqvEc4KoGoSiKionWEpiF3xweCxkTltYsCkkohK1Jc5TbvGIWDlkfcjxs_UM2Q5gVtGA9Gu9xFq52U_2fNoBEXTdM4qn0N3sg72-t8cy74rYGFpxpt7k4veFf5vN0hCvJfkuRj-8nMCQvy3cU9QkeSPZFMJqejTqff81qz64nlPq-"/><span class="font-headline-sm text-headline-sm text-on-surface">ExpiryAlert</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-on-surface-variant truncate max-w-[110px]">Home</span></div><div class="flex items-center gap-space-xs"><button class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2haEO_q7ZlMkEbjum66hlYxpLO_7UAk-IsXtnVb6f3VMk-xi-QxpOlH2kiCsSi18-oCBQ83s-vzPHhhqMc4aEnT8B85pI8lr1olQa8VeIYbiRCwzzYVx01Dkf2KXku0gltuhPAFVEwtW2ixLo-numECHD-qMalUKdYt7mW7kfk6f6QoZFAcz_nFLYHghZRZ888ZpSyxYa2rWrB_XnaJYZjJkQp18N7QrCEaPR1Kw"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Greeting Header Section -->
+<section class="px-gutter pt-2 pb-4 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+          Today, Nov 20, 2026
+        </p>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight mt-0.5">
+          Good morning, Sarah
+        </h1>
+</div>
+<!-- Quick Micro Delight: Daily Peace Badge -->
+<div class="flex items-center gap-1.5 bg-surface-container-high px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-container">96% Fresh</span>
+</div>
+</div>
+<!-- Quick Action Pills -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-1.5 pb-1">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary shadow-sm active:scale-95 transition-all text-left whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+<span class="font-label-md text-label-md">Scan Barcode</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-all text-left whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_calendar</span>
+<span class="font-label-md text-label-md">Quick Add</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-error shadow-sm active:scale-95 transition-all text-left whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-md text-label-md">View Expired (2)</span>
+</button>
+</div>
+</section>
+<!-- Urgent Action Card (Delightful & Instant-Dismiss) -->
+<section class="px-gutter mb-space-md" id="urgent-alert">
+<div class="relative overflow-hidden rounded-2xl bg-error-container text-on-error-container p-4 shadow-sm">
+<div class="absolute -right-4 -bottom-6 w-24 h-24 rounded-full bg-error/10 pointer-events-none"></div>
+<div class="flex items-start justify-between gap-3 relative z-10">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[22px]">notification_important</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error text-on-error font-bold uppercase tracking-wider">
+                Expires Today
+              </span>
+<span class="font-label-sm text-label-sm text-on-error-container/80">Fridge • Top Shelf</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-error-container mt-1 font-bold">
+              Organic Whole Milk (1 Gallon)
+            </h2>
+<p class="font-body-sm text-body-sm text-on-error-container/90 mt-0.5">
+              Enjoy before midnight to avoid waste!
+            </p>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 mt-3.5 pt-3 border-t border-error/10 relative z-10">
+<button class="flex-1 py-2 px-3 rounded-lg bg-on-error-container text-on-primary text-center font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all" onclick="document.getElementById('urgent-alert').style.display='none'" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Mark Consumed
+        </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest/80 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-lowest transition-all" onclick="document.getElementById('urgent-alert').style.display='none'" type="button">
+          Dismiss
+        </button>
+</div>
+</div>
+</section>
+<!-- 4 Metrics Summary Grid -->
+<section class="px-gutter mb-space-xl">
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Metric 1: Total Products -->
+<div class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">All items</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">24</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active products</p>
+</div>
+</div>
+<!-- Metric 2: Expiring Soon (1-7 days) -->
+<div class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">1-7d</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-bold">3</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expiring soon</p>
+</div>
+</div>
+<!-- Metric 3: Expires Today -->
+<div class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-xl bg-error-container text-error flex items-center justify-center relative">
+<span class="material-symbols-outlined text-[20px]">priority_high</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error/15 text-error font-semibold">Urgent</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg text-error tracking-tight font-bold">1</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expires today</p>
+</div>
+</div>
+<!-- Metric 4: Expired -->
+<div class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">delete_forever</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error text-on-error font-semibold">Attention</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">2</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Already expired</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Expiring Soon (Next 7 Days) -->
+<section class="px-gutter mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">alarm</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Expiring Soon</h2>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline" type="button">
+        See all (3)
+      </button>
+</div>
+<!-- Product Card 1: Greek Yogurt -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between group transition-all hover:shadow-md">
+<!-- Urgency Rail (Amber/Orange) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex items-center gap-3.5 pl-1.5 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A clean top-down close-up photo of a healthy Greek Yogurt container with fresh berries beside it, softly lit on a white marble countertop with pastel purple morning reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeIFssDw_1t9JAYUS4mYEf20CCw4D7B07BkXIny3EIKWSX1tVE2m4k-oK73pZpeB2nkVhdLBIHntn-DCo5O-ZSFe_uoIFOqWiDo0AXtQbC0tJLGYadbbLDNw7dgPVlklhIHkXbyU_7IOFfDQnAup9inUZ_u92MqRkEDMiNZNEbQMwh00s3JMHJbybh7LoeCJE6vjWKsEeQZwMVczAaEXy1m73E47HKY6sZqxGmwVY"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">Food • Dairy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 2 tubs</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold mt-0.5">Greek Yogurt 500g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exp: Tomorrow, Nov 21</p>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="inline-block px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold tracking-tight">
+          1 day left
+        </span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary mt-1 hover:bg-surface-container transition-colors" title="Quick check-off" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2: Amoxicillin 500mg -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between group transition-all hover:shadow-md">
+<!-- Urgency Rail (Amber) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center gap-3.5 pl-1.5 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Minimalist pharmaceutical packaging for Amoxicillin prescription medicine in a pristine home medicine cabinet, gentle soft warm lighting, hygienic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbWxn8aqDN8qezvvMbwlwQXx_hEJ-4mPiNt5MxnLPkGaHV_M4Vl_svTA_jBJnmmRJG4WOP1sr1E_NEGxvfChbItFegGKHR7e0sjlZ0fFwMkhYvFQBZSoj3DJfgHbngC7iNKqZWlJ14va7-fj5c1k-M6LFXXATaxZN84DrcBpm5ZtSRLY3W850BT79cAdJAaiUSiz2Oz-AFSRgXHtxkIlmB7IAE91lUY_b3ZH_JADE"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">Medicine</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1 box</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold mt-0.5">Amoxicillin 500mg</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exp: Nov 23, 2026</p>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="inline-block px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold tracking-tight">
+          3 days left
+        </span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary mt-1 hover:bg-surface-container transition-colors" title="Quick check-off" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3: Fresh Baby Spinach -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between group transition-all hover:shadow-md">
+<!-- Urgency Rail (Amber) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center gap-3.5 pl-1.5 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Vibrant organic fresh baby spinach leaves in eco-friendly clear packaging, crisply lit morning kitchen aesthetic with subtle lavender morning daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVb8H1xU68AkLjXIONVizWs2citbd4Ypun19VZNSWRXu6AgR3182SdLxXRR9XI5i7dzz0yO24aPE0jDU5QmQlUMY2edvKy_l66eNpuhcUMC2OjltzvSKI1LOnO6wEjiZD7IA-r1ocEb6nrMovELoestxGj0dgsWPOPrECBVkjN2nYFUmnkPzeiEcF-_tD1lh5_RRiWOAdrQn3-lb-m_mljm3lurRZRlMcjZD-Ipn4"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">Food • Produce</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1 bag</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold mt-0.5">Fresh Baby Spinach</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exp: Nov 25, 2026</p>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="inline-block px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-bold tracking-tight">
+          5 days left
+        </span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary mt-1 hover:bg-surface-container transition-colors" title="Quick check-off" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: Recently Added -->
+<section class="px-gutter mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">new_releases</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recently Added</h2>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold hover:underline" type="button">
+        View All
+      </button>
+</div>
+<!-- Product Card 4: Daily Vitamin D3 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between group transition-all hover:shadow-md">
+<!-- Safe Urgency Rail (Secondary Green) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-3.5 pl-1.5 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A modern amber glass bottle of Vitamin D3 supplements with elegant typography label on a wooden nightstand with warm morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlcFBMhV_CWuT4RvwTTRbjUXDwnu4rZYbfuL_ZrPUNEN9_YZhHHd7s6osFuliyheF4pvnWZLJdKntCGlz3WacjYZTnCDRQanAWDEfzAU_WlrGTd-A-UpyFpNqR9LZkrmT8vSQqS2LIpW1UuCF5Git4ysFlP40EvotrzFRme6mflPmrTcNGcDIp_9mgxcWogSunXF3ZgHK74bYOwJmVHSfuYE94KHUQzbDL0zBf-EQ"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">Supplements</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1 bottle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold mt-0.5">Daily Vitamin D3</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exp: Dec 15, 2027</p>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="inline-block px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">
+          390d safe
+        </span>
+<span class="block text-right font-label-sm text-label-sm text-on-surface-variant mt-1.5">Pantry</span>
+</div>
+</div>
+<!-- Product Card 5: Hydrating Ceramide Cream -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between group transition-all hover:shadow-md">
+<!-- Safe Urgency Rail (Secondary Green) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-3.5 pl-1.5 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A luxurious minimalist skincare moisturizer jar with clean label resting next to a gentle succulent plant in a bathroom vanity setup, serene ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw0RyZ_taAA4AdzL7VzbWXx0CrRdi3w-epf1OedAlXT4IZUrxeYajY9BmqCKilPlMs4MU0rZC6P2msVk6FpIbPmdPrC6PbjPUCpUC_lTnr13DwE8__Z-ZOCTIacZmJuSeAuS2SRw_EjTCTjv6rMXWFzAByIqzqUSzWyWAoed_Klu9nINTJGxp6uYdLmnlPvE4SxJm6roHzFUaTEMT88FnEzRgOCGwQzBNh0AA3amE"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-md">Skincare</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1 jar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold mt-0.5">Hydrating Ceramide Cream</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exp: Aug 10, 2027</p>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="inline-block px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">
+          Safe
+        </span>
+<span class="block text-right font-label-sm text-label-sm text-on-surface-variant mt-1.5">Bathroom</span>
+</div>
+</div>
+</section>
+<!-- Interactive Demo Tool: Empty State Showcase Toggle -->
+<div class="px-gutter pt-2">
+<div class="p-4 rounded-2xl bg-surface-container border-0 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Zero-Waste Tracker</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">You saved $42.50 in groceries this week</p>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(91,69,200,0.08)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm max-w-md mx-auto relative"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs transition-all text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="products" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Products</span></a><div class="relative -top-5 flex flex-col items-center"><a class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(121,101,232,0.4)] hover:bg-primary-container active:scale-95 transition-all" data-path="add-product" href="#"><span class="material-symbols-outlined text-[28px]">add</span></a><span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Add</span></div><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">settings</span><span class="font-label-sm text-label-sm">Settings</span></a></div></nav></body></html>

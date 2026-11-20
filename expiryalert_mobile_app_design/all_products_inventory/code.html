@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#5b45c8", "primary-fixed": "#e5deff", "secondary-fixed": "#6ffbbe", "error": "#ba1a1a", "error-container": "#ffdad6", "primary-container": "#7460e3", "surface-dim": "#dbd8e6", "on-secondary-container": "#00714d", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "inverse-on-surface": "#f2effd", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "on-primary-fixed": "#1a0063", "tertiary": "#825100", "on-tertiary-fixed": "#2a1700", "on-primary": "#ffffff", "surface-container-highest": "#e3e1ef", "on-secondary-fixed": "#002113", "on-error-container": "#93000a", "secondary-container": "#6cf8bb", "tertiary-container": "#a36700", "secondary-fixed-dim": "#4edea3", "surface-variant": "#e3e1ef", "tertiary-fixed": "#ffddb8", "surface-tint": "#5d48cb", "on-secondary-fixed-variant": "#005236", "on-primary-container": "#fffbff", "surface-container": "#efecfa", "primary-fixed-dim": "#c8bfff", "on-tertiary-fixed-variant": "#653e00", "outline": "#797585", "on-surface": "#1b1b24", "surface-container-high": "#e9e6f5", "inverse-primary": "#c8bfff", "on-surface-variant": "#484554", "secondary": "#006c49", "outline-variant": "#c9c4d6", "surface-container-low": "#f5f2ff", "inverse-surface": "#302f3a", "surface": "#fcf8ff", "tertiary-fixed-dim": "#ffb95f", "background": "#fcf8ff", "on-primary-fixed-variant": "#452bb2", "on-background": "#1b1b24", "on-tertiary": "#ffffff", "on-tertiary-container": "#fffbff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "gutter": "1rem", "space-xl": "1.5rem", "gutter-compact": "0.75rem", "space-md": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-2xl": "2rem", "space-lg": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "numeric-countdown": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "numeric-countdown": ["18px", { "lineHeight": "22px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fcf8ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ExpiryAlert Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrD_tp79JarSJJ-VsLYRj2fv1dYxUZtgsWYpgkJDqmVd9BojlI5ac6eA0dmLhphPqvEc4KoGoSiKionWEpiF3xweCxkTltYsCkkohK1Jc5TbvGIWDlkfcjxs_UM2Q5gVtGA9Gu9xFq52U_2fNoBEXTdM4qn0N3sg72-t8cy74rYGFpxpt7k4veFf5vN0hCvJfkuRj-8nMCQvy3cU9QkeSPZFMJqejTqff81qz64nlPq-"/><span class="font-headline-sm text-headline-sm text-on-surface">ExpiryAlert</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-on-surface-variant truncate max-w-[110px]">Products</span></div><div class="flex items-center gap-space-xs"><button class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2haEO_q7ZlMkEbjum66hlYxpLO_7UAk-IsXtnVb6f3VMk-xi-QxpOlH2kiCsSi18-oCBQ83s-vzPHhhqMc4aEnT8B85pI8lr1olQa8VeIYbiRCwzzYVx01Dkf2KXku0gltuhPAFVEwtW2ixLo-numECHD-qMalUKdYt7mW7kfk6f6QoZFAcz_nFLYHghZRZ888ZpSyxYa2rWrB_XnaJYZjJkQp18N7QrCEaPR1Kw"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Search & Category Filters -->
+<section class="px-margin flex flex-col gap-space-md pt-2">
+<!-- Search Bar -->
+<div class="relative w-full flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-12 pl-10 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] focus:outline-none focus:bg-surface-container-lowest transition-all" id="product-search" placeholder="Search products, brands, or categories..." type="text"/>
+<button aria-label="Clear search" class="absolute right-3 w-7 h-7 flex items-center justify-center rounded-full text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="clear-search-btn" onclick="const el = document.getElementById('product-search'); el.value = ''; el.focus();" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Category Chips Carousel -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_12px_rgba(91,69,200,0.25)] transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">category</span>
+<span>All (24)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+<span>Food (12)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">medication</span>
+<span>Medicine (4)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span>
+<span>Beverages (3)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">spa</span>
+<span>Skincare (3)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">brush</span>
+<span>Cosmetics (1)</span>
+</button>
+<button class="category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">cleaning_services</span>
+<span>Household (1)</span>
+</button>
+</div>
+</section>
+<!-- Filter & Sort Sub-Header -->
+<section class="px-margin pt-space-md flex items-center justify-between gap-space-sm">
+<!-- Status Filter Dropdown / Pill Button -->
+<div class="relative">
+<button class="flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="status-filter-btn" onclick="document.getElementById('status-menu').classList.toggle('hidden')" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span id="active-status-label">All Statuses</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<!-- Dropdown Popover -->
+<div class="hidden absolute top-11 left-0 z-30 w-48 py-1.5 rounded-xl bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(32,32,42,0.14)] flex flex-col" id="status-menu">
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container flex items-center justify-between" onclick="selectStatus('All Statuses (24)', this)" type="button">
+<span>All Statuses</span>
+<span class="font-body-sm text-body-sm text-outline">24</span>
+</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-error hover:bg-surface-container flex items-center justify-between" onclick="selectStatus('Expires Today (1)', this)" type="button">
+<span>Expires Today</span>
+<span class="font-body-sm text-body-sm text-error">1</span>
+</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-tertiary-container hover:bg-surface-container flex items-center justify-between" onclick="selectStatus('Expiring Soon (3)', this)" type="button">
+<span>Expiring Soon</span>
+<span class="font-body-sm text-body-sm text-tertiary-container">3</span>
+</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-secondary hover:bg-surface-container flex items-center justify-between" onclick="selectStatus('Safe (18)', this)" type="button">
+<span>Safe</span>
+<span class="font-body-sm text-body-sm text-secondary">18</span>
+</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface-variant hover:bg-surface-container flex items-center justify-between" onclick="selectStatus('Expired (2)', this)" type="button">
+<span>Expired</span>
+<span class="font-body-sm text-body-sm text-outline">2</span>
+</button>
+</div>
+</div>
+<!-- Sort Options Button -->
+<div class="relative">
+<button class="flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="sort-menu-btn" onclick="document.getElementById('sort-menu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">swap_vert</span>
+<span id="active-sort-label">Nearest Expiry</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<!-- Sort Menu Popover -->
+<div class="hidden absolute top-11 right-0 z-30 w-44 py-1.5 rounded-xl bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(32,32,42,0.14)] flex flex-col" id="sort-menu">
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-primary font-bold hover:bg-surface-container" onclick="selectSort('Nearest Expiry')" type="button">Nearest Expiry</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container" onclick="selectSort('Furthest Expiry')" type="button">Furthest Expiry</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container" onclick="selectSort('Recently Added')" type="button">Recently Added</button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container" onclick="selectSort('Name (A-Z)')" type="button">Name (A-Z)</button>
+</div>
+</div>
+</section>
+<!-- Grouped Expiry Product List -->
+<section class="flex flex-col gap-space-lg pt-space-lg">
+<!-- Group: Expires Today -->
+<div class="flex flex-col">
+<div class="sticky top-16 z-20 px-margin py-2 bg-surface/90 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-error">Expires Today</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">1</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Consume first</span>
+</div>
+<div class="px-margin pt-space-xs flex flex-col gap-space-md">
+<!-- Card 1: Organic Whole Milk 1L -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex flex-col gap-space-md group" id="item-milk">
+<!-- Leading Urgent Indicator Rail -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between gap-space-sm pl-1.5">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clear glass bottle of fresh organic whole milk sitting on a minimalist kitchen countertop in soft morning daylight with clean purple ambient tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzf2le_ADUD3fSNl3y6mULt1m_Hx7IKXdWo_JRIcS43k4BUy7OwWuVfSC0ua8tbLliX1Q-98toM1MUQY1cE_0trHjWJ8G_QKn1m6CKbTyDNgkCzksz__Ptk83mEPSOItYMu2OUjlc9GRZT60Q5BIzBZgJMw0aRCUJUnyT16fDticagdgHqrZdYv-HyILqNu_Ca6-GrRTjPne5D_JVIneALT3OK4JASkktvF9qX8qU"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Organic Whole Milk 1L</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Clover Farm • Qty: 1 bottle</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+                    Expires Today
+                  </span>
+<span class="font-body-sm text-body-sm text-outline">Nov 20, 2026</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Options Dropdown / Swipe simulated -->
+<button aria-label="Item actions" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="document.getElementById('action-menu-milk').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex items-center gap-space-sm pt-space-xs pl-1.5">
+<button class="flex-1 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-secondary-fixed-dim transition-colors" onclick="markItemConsumed('item-milk')" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Mark Consumed</span>
+</button>
+<button aria-label="Edit item" class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Delete item" class="w-9 h-9 rounded-lg bg-error-container text-on-error-container flex items-center justify-center hover:opacity-90 transition-opacity shrink-0" onclick="removeItem('item-milk')" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<!-- Hidden Context Menu Drawer -->
+<div class="hidden absolute top-12 right-4 z-30 w-40 rounded-xl bg-surface-container-lowest shadow-[0_8px_24px_-4px_rgba(32,32,42,0.15)] flex flex-col py-1" id="action-menu-milk">
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container flex items-center gap-2" onclick="markItemConsumed('item-milk')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span> Mark Used
+            </button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-on-surface hover:bg-surface-container flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Details
+            </button>
+<button class="px-3.5 py-2 text-left font-label-md text-label-md text-error hover:bg-surface-container flex items-center gap-2" onclick="removeItem('item-milk')" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span> Discard
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Expiring Soon -->
+<div class="flex flex-col">
+<div class="sticky top-16 z-20 px-margin py-2 bg-surface/90 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Expiring Soon</h2>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">3</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Within 7 days</span>
+</div>
+<div class="px-margin pt-space-xs flex flex-col gap-space-md">
+<!-- Card 2: Greek Yogurt 500g -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-yogurt">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Tub of authentic Greek strained yogurt on a calm pastel lavender surface with soft natural studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9zOT44ZG85uDo4BUsOW92xjVlJR9V56GrpiqwPpMntbF2ML19f-oCqx6fFtNFGG6NEvjUG4yPeAumNXvJuH4R-p6ZYfKa8kodkqm1S_z4FCoT2fvn-cMzFbX6Dz7R5lyCFzx-pnilU4qNz8-x0UX8DbHDLBS90o-O1AT4j50FnrpfHOFggKYn-mT4C4jxJFuoDUqEq0VRRJosdiCHbgG8cYE9v7WfMRsGrw-w6E"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Greek Yogurt 500g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Fage • Qty: 2 tubs</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">1 day left</span>
+<span class="font-body-sm text-body-sm text-outline">Nov 21, 2026</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-numeric-countdown text-numeric-countdown text-tertiary-container">1d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-yogurt')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Amoxicillin 500mg -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-amoxicillin">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">medication</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Amoxicillin 500mg</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Medicine • Qty: 1 box</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">3 days left</span>
+<span class="font-body-sm text-body-sm text-outline">Nov 23, 2026</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-numeric-countdown text-numeric-countdown text-tertiary-container">3d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-amoxicillin')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Fresh Baby Spinach -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-spinach">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clear container of vibrant green baby spinach leaves fresh and crisp with light condensation on soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqgLIaf36qKLiQJM_tppaUa7ulBYKFpPxlc8EortlBNyh59LAF26dKiD5qEUkHTp6Y8DddHzLzTWdnchJt4oE9762AhBfeuwxNv94KsAh26eHrenOk3sebSuasY2iXQpSwyCuvKufONBcot2hxCw0iqxLOtds7128JZC9pLV8c7MzucMqBa9mWCOxbVkqpDWcF9WHa7mooKckacIV7-vEbdSCNnnMfvK3FXrTXvVw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Fresh Baby Spinach</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Organic Farms • Qty: 1 pack</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">5 days left</span>
+<span class="font-body-sm text-body-sm text-outline">Nov 25, 2026</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-numeric-countdown text-numeric-countdown text-tertiary-container">5d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-spinach')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Safe Items -->
+<div class="flex flex-col">
+<div class="sticky top-16 z-20 px-margin py-2 bg-surface/90 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Safe</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">18</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Relaxed timeline</span>
+</div>
+<div class="px-margin pt-space-xs flex flex-col gap-space-md">
+<!-- Card 5: Daily Vitamin D3 2000IU -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-vitamind">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">vital_signs</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Daily Vitamin D3 2000IU</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Supplements • Qty: 1 bottle</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Safe • 390d</span>
+<span class="font-body-sm text-body-sm text-outline">Dec 15, 2027</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-md text-label-md text-secondary font-bold">390d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-vitamind')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+<!-- Card 6: Arabica Ground Coffee 250g -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-coffee">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">coffee</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Arabica Ground Coffee 250g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Beverages • Qty: 1 pouch</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Safe • 114d</span>
+<span class="font-body-sm text-body-sm text-outline">Mar 14, 2027</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-md text-label-md text-secondary font-bold">114d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-coffee')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+<!-- Card 7: SPF 50 Sunscreen Fluid -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04),0_4px_16px_-4px_rgba(121,101,232,0.06)] flex items-center justify-between gap-space-sm" id="item-sunscreen">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-space-sm min-w-0 pl-1.5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">wb_sunny</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">SPF 50 Sunscreen Fluid</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Skincare • Qty: 1 tube</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Safe</span>
+<span class="font-body-sm text-body-sm text-outline">May 20, 2027</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 shrink-0">
+<span class="font-label-md text-label-md text-secondary font-bold">181d</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" onclick="markItemConsumed('item-sunscreen')" title="Consume" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Offline Sync Status Indicator Footer -->
+<section class="mt-space-xl px-margin flex items-center justify-center">
+<div class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">check_circle</span>
+<span>All items saved locally (SQLite)</span>
+</div>
+</section>
+</div>
+<script>
+  function markItemConsumed(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.style.transition = 'all 0.35s ease';
+    card.style.opacity = '0.4';
+    card.style.transform = 'scale(0.97)';
+    setTimeout(() => {
+      card.classList.add('line-through');
+      const title = card.querySelector('h3');
+      if (title) title.classList.add('line-through', 'text-outline');
+    }, 150);
+  }
+
+  function removeItem(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.style.transition = 'all 0.3s ease';
+    card.style.transform = 'translateX(100%)';
+    card.style.opacity = '0';
+    setTimeout(() => {
+      card.remove();
+    }, 300);
+  }
+
+  function selectStatus(label, btn) {
+    document.getElementById('active-status-label').innerText = label.split(' ')[0];
+    document.getElementById('status-menu').classList.add('hidden');
+  }
+
+  function selectSort(sortLabel) {
+    document.getElementById('active-sort-label').innerText = sortLabel;
+    document.getElementById('sort-menu').classList.add('hidden');
+  }
+
+  // Interactive Category Chip Switching
+  document.querySelectorAll('.category-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.category-chip').forEach(c => {
+        c.className = 'category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-[0_2px_8px_-2px_rgba(32,32,42,0.04)] hover:bg-surface-container transition-all';
+      });
+      this.className = 'category-chip shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-[0_4px_12px_rgba(91,69,200,0.25)] transition-all';
+    });
+  });
+
+  // Close menus on outside tap
+  document.addEventListener('click', (e) => {
+    const statusBtn = document.getElementById('status-filter-btn');
+    const statusMenu = document.getElementById('status-menu');
+    if (statusBtn && statusMenu && !statusBtn.contains(e.target) && !statusMenu.contains(e.target)) {
+      statusMenu.classList.add('hidden');
+    }
+
+    const sortBtn = document.getElementById('sort-menu-btn');
+    const sortMenu = document.getElementById('sort-menu');
+    if (sortBtn && sortMenu && !sortBtn.contains(e.target) && !sortMenu.contains(e.target)) {
+      sortMenu.classList.add('hidden');
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(91,69,200,0.08)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-sm max-w-md mx-auto relative"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs transition-all text-primary font-bold" data-path="products" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Products</span></a><div class="relative -top-5 flex flex-col items-center"><a class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_8px_24px_-4px_rgba(121,101,232,0.4)] hover:bg-primary-container active:scale-95 transition-all" data-path="add-product" href="#"><span class="material-symbols-outlined text-[28px]">add</span></a><span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Add</span></div><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[24px]">settings</span><span class="font-label-sm text-label-sm">Settings</span></a></div></nav></body></html>
