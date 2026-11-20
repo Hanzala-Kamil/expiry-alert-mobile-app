@@ -1,0 +1,78 @@
+name: expiry_alert
+description: ExpiryAlert - Mobile application for tracking product expiry dates
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  riverpod: ^2.5.0
+  go_router: ^13.2.0
+
+  # Material Design 3
+  material_color_utilities: ^1.0.0
+
+  # Backend
+  supabase_flutter: ^2.7.0
+
+  # Local persistence
+  sqflite: ^2.3.0
+  flutter_secure_storage: ^9.2.0
+  uuid: ^4.4.0
+
+  # Local notifications
+  flutter_local_notifications: ^18.0.1
+
+  # Barcode scanning
+  mobile_scanner: ^4.2.1
+
+  # OCR - Google ML Kit
+  google_mlkit_text_recognition: ^0.9.0
+
+  # Image picking
+  image_picker: ^1.1.2
+
+  # Internationalization
+  intl: ^0.18.0
+
+  # Device info
+  connectivity_plus: ^6.1.1
+
+  # CSV export
+  csv: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation and analysis
+  flutter_lints: ^3.0.0
+  mockito: ^5.4.0
+
+flutter:
+  uses-material-design: true
+
+  # Custom fonts from design system
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: fonts/plus_jakarta_sans/PlusJakartaSans-Regular.ttf
+        - asset: fonts/plus_jakarta_sans/PlusJakartaSans-Medium.ttf
+          weight: 500
+        - asset: fonts/plus_jakarta_sans/PlusJakartaSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/plus_jakarta_sans/PlusJakartaSans-Bold.ttf
+          weight: 700
+
+    - family: Material Symbols Outlined
+      fonts:
+        - asset: fonts/material_symbols_outlined/MaterialSymbolsOutlined-Regular.ttf
+
+  # Asset images (placeholder - will be replaced with actual assets)
+  assets:
+    - assets/images/logo.png
+    - assets/images/placeholder_product.png

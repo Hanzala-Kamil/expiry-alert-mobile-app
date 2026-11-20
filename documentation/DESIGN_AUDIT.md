@@ -119,9 +119,9 @@ All typography uses the **Plus Jakarta Sans** font family with the following sty
 | Level | Description |
 |-------|-------------|
 | Level 0 | App canvas: `#F8F8FC` flat tone |
-| Level 1 | Cards, list items, chips: `#FFFFFF` with `0 2px 8px -2px rgba(32,32,42,0.04), 0 4px 16px -4px rgba(121,101,232,0.06)` |
+| Level 1 | Cards, list items, chips: `#FFFFFF` with ambient shadow |
 | Level 2 | Active drag states, FAB: `0 8px 24px -4px rgba(121,101,232,0.18)` |
-| Level 3 | Modals, quick-add bottom sheets: `0 -8px 32px 0 rgba(32,32,42,0.08)` with 40% opacity darkened backdrop blur |
+| Level 3 | Modals, quick-add bottom sheets: `0 -8px 32px 0 rgba(32,32,42,0.08)` with 40% opacity backdrop blur |
 
 ### Shapes & Rounded Corners
 
@@ -164,13 +164,13 @@ All typography uses the **Plus Jakarta Sans** font family with the following sty
 
 ## 2. Available Screens from Stitch Designs
 
-| Screen Name | HTML File | Screen Preview | Key Features |
-|-------------|-----------|----------------|--------------|
-| **Home Dashboard** | `expiryalert_home_dashboard/code.html` | Home dashboard with metrics grid, expiring soon list, recently added | Metrics (total, expiring soon, expires today, expired), product cards grouped by status, quick actions (scan barcode, quick add) |
-| **All Products Inventory** | `all_products_inventory/code.html` | Products list with search, category filters, grouped expiry sections | Search bar, category chips, status filter dropdown, sort options, grouped product list (Expires Today, Expiring Soon, Safe, Expired), offline sync indicator |
-| **Add Product** | `add_new_product/code.html` | Product creation form | Product name (required), category selector, expiry date picker, barcode scanning, OCR for expiry date, brand (optional), barcode/GTIN, purchase date, quantity & unit, product photo, storage notes, expiry alert cadence (7d/3d/1d/expiry day) |
-| **Settings Data Management** | `settings_data_management/code.html` | Profile, notifications, SQLite, Supabase sync, theme, privacy | Profile section, notification reminders cadence, SQLite export/clear, Supabase cloud sync, theme selector (light/dark/system), about, logout |
-| **Vigilant Calm Design System** | `vigilant_calm/DESIGN.md` | Full design system documentation | Colors, typography, layout, elevation, shapes, components |
+| Screen Name | HTML File | Key Features |
+|-------------|-----------|--------------|
+| **Home Dashboard** | `expiryalert_home_dashboard/code.html` | Metrics grid, expiring soon list, recently added, quick action pills |
+| **All Products Inventory** | `all_products_inventory/code.html` | Search bar, category chips, status filter dropdown, grouped product list, offline sync indicator |
+| **Add Product** | `add_new_product/code.html` | Product name (required), category selector, expiry date picker, barcode scanning, OCR for expiry date, brand (optional), barcode/GTIN, purchase date, quantity & unit, product photo, storage notes, reminder cadence |
+| **Settings Data Management** | `settings_data_management/code.html` | Profile section, notification reminders cadence, SQLite export/clear, Supabase cloud sync, theme selector (light/dark/system), about, logout |
+| **Vigilant Calm Design System** | `vigilant_calm/DESIGN.md` | Full design system documentation — colors, typography, layout, elevation, shapes, components |
 
 ### Missing Screens (to be designed consistently with design system)
 
@@ -237,7 +237,7 @@ The bottom navigation bar has 5 items (from the home dashboard HTML):
 
 1. **Home** (active) - `home` icon + label
 2. **Products** - `inventory_2` icon + label
-3. **Add** - Floating action button (larger, circular, primary-colored)
+3. **Add** - FAB-style button (larger, circular, primary-colored)
 4. **Insights** - `bar_chart` icon + label
 5. **Settings** - `settings` icon + label
 
@@ -322,53 +322,38 @@ lib/
     app.dart
     router.dart
     theme/
-      theme.dart       ← Centralized M3 theme
-      colors.dart      ← Custom color extension
-      typography.dart  ← Text style definitions
     constants/
-      app_constants.dart
 
   core/
-    database/          ← SQLite operations (sqflite)
-      product_dao.dart
-      database_helper.dart
-    errors/            ← Custom error classes
-    notifications/     ← Local notification management
-      notification_service.dart
-    services/          ← External integrations
-      open_food_facts.dart
-      barcode_scanner.dart
-      ocr_service.dart
-    utils/             ← Utility functions
-      expiry_calculation.dart
-      date_helpers.dart
-      local_storage.dart
-    widgets/           ← Reusable widgets
-      product_card.dart
-      status_badge.dart
-      category_chip.dart
-      primary_button.dart
+    database/
+    errors/
+    notifications/
+    services/
+    utils/
+    widgets/
 
   features/
-    onboarding/        ← Onboarding screens
-    home/              ← Home dashboard
-    products/          ← Products list & CRUD
-    add_product/       ← Add product form
-    product_details/   ← Product detail view
-    barcode_scanner/   ← Barcode scanning
-    expiry_ocr/        ← OCR expiry scanning
-    notifications/     ← Notification preferences
-    authentication/    ← Login/Register
-    settings/          ← User settings
-    synchronization/   ← Sync management
+    onboarding/
+    home/
+    products/
+    add_product/
+    product_details/
+    barcode_scanner/
+    expiry_ocr/
+    notifications/
+    authentication/
+    settings/
+    synchronization/
 
-  models/              ← Dart models (Product, etc.)
-  repositories/        ← Repository pattern
+  models/
+  repositories/
 
 assets/
   images/
   icons/
   fonts/
+
+test/
 ```
 
 ### Key Architecture Principles
@@ -406,11 +391,7 @@ assets/
 | `/register` | RegisterScreen |
 | `/settings` | SettingsScreen |
 
----
-
-## 6. Required Dependencies
-
-Based on the feature requirements and design system, the following Flutter packages are needed:
+### Required Dependencies
 
 | Package | Purpose | Version Hint |
 |---------|---------|--------------|
@@ -426,46 +407,28 @@ Based on the feature requirements and design system, the following Flutter packa
 | `flutter_secure_storage` | Secure storage | ^9.2.0 |
 | `uuid` | UUID generation | ^4.4.0 |
 | `intl` | Internationalization | ^0.18.0 |
-| **Optional:** | | |
-| `connectivity_plus` | Network status | ^6.1.1 |
-| **Dev Dependencies:** | | |
-| `flutter_test` | Testing | SDK |
-| `mockito` | Mocking | ^5.4.0 |
-| **Code Analysis:** | | |
-| `flutter_lints` | Lint rules | ^3.0.0 |
 
-### Platform Compatibility
+### Missing Design Information
 
-- **Google ML Kit Text Recognition:** Subject to platform compatibility; fallback to manual entry
-- **Barcode Scanner:** Requires camera permission; graceful degradation on denial
-- **Local Notifications:** Requires permission contextually
-- **SQLite:** Full support on iOS and Android
-
----
-
-## 7. Missing Design Information
-
-The following items need to be either inferred from the design system or designed consistently:
-
-1. **Onboarding screen visuals** — No Stitch designs found; will use design system colors/typography
-2. **Product Details screen** — Partially in All Products Inventory; full design needed
-3. **Edit Product screen** — Based on Add Product form, read-only mode
-4. **Barcode Scanner UI** — Camera preview with overlay; scan result display
-5. **Expiry OCR UI** — Camera preview with detected text overlay
-6. **Notification deep link handling** — When tapped, should open relevant product details
-7. **Login/Registration flows** — No Stitch designs; design consistently with system
-8. **CSV export format** — Not visually specified; will follow data structure
-9. **Date format locales** — Intl support needed; default YYYY-MM-DD for database, locale-aware display
-10. **Empty states** — All lists need proper empty states designed with system typography/colors
-11. **Error states** — Network errors, database errors, OCR failures need visual treatment
-12. **Splash screen** — No design; will use ExpiryAlert logo + app name
-13. **App bar variations** — Subtle differences between screens (profile badge, notification badge, etc.)
-14. **Keyboard handling** — No specific design; standard Flutter safe area + keyboard avoidance
-15. **Drag & drop interactions** — Not in designs; native scroll/click interactions
+1. Onboarding screen visuals — No Stitch designs; will use design system colors/typography
+2. Product Details screen — Partially in All Products Inventory; full design needed
+3. Edit Product screen — Based on Add Product form, read-only mode
+4. Barcode Scanner UI — Camera preview with overlay; scan result display
+5. Expiry OCR UI — Camera preview with detected text overlay
+6. Notification deep link handling — When tapped, should open relevant product details
+7. Login/Registration flows — No Stitch designs; design consistently with system
+8. CSV export format — Not visually specified; will follow data structure
+9. Date format locales — Intl support needed; default YYYY-MM-DD for database, locale-aware display
+10. Empty states — All lists need proper empty states designed with system typography/colors
+11. Error states — Network errors, database errors, OCR failures need visual treatment
+12. Splash screen — No design; will use ExpiryAlert logo + app name
+13. App bar variations — Subtle differences between screens (profile badge, notification badge, etc.)
+14. Keyboard handling — No specific design; standard Flutter safe area + keyboard avoidance
+15. Drag & drop interactions — Not in designs; native scroll/click interactions
 
 ---
 
-## 8. Next Implementation Step
+## 6. Next Implementation Step
 
 **Phase 01: Project Initialization & Design System Setup**
 
